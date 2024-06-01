@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scrollbar-width: smooth;
+  background-color: #ffffff;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+section::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.onHover {
+  transition: all 0.3s ease-in-out;
+}
