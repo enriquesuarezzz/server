@@ -15,7 +15,7 @@ export default function ContactPage() {
       <div className="relative h-screen">
         <Image
           src={
-             +
+             
             '/images/contact/contact_background.jpg'
           }
           layout="fill"
