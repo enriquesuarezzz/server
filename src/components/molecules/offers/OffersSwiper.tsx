@@ -12,25 +12,25 @@ import Link from 'next/link'
 export default function OffersSwiper() {
   const swipers = [
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      image: `${ + '/images/prices_cards_section/depilation_example1.jpg'}`,
       alt: 'Depilation example',
       description:
         'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
     },
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'}`,
+      image: `${ + '/images/about_us.jpg'}`,
       alt: 'Depilation example',
       description:
         'Trae a un amigo y consigue un 2x1 en una sesion de depilación. ¡No te lo pierdas!',
     },
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      image: `${ + '/images/prices_cards_section/depilation_example1.jpg'}`,
       alt: 'Depilation example',
       description:
         '50% de descuento en todas las sesiones de depilación. ¡No te lo pierdas!',
     },
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'}`,
+      image: `${ + '/images/about_us.jpg'}`,
       alt: 'Depilation example',
       description:
         'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
