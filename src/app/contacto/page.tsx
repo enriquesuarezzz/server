@@ -1,5 +1,5 @@
 import { BarlowText } from '@/components/atoms/BarlowText'
-import ContactForm from '@/components/molecules/Contact/Contact'
+import ContactForm from '@/components/molecules/Contact/ContactForm'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,38 +11,36 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <>
-      <div className="relative h-screen">
+    <main>
+      <section className="flex flex-col">
         <Image
-          src={
-             
-            '/images/contact/contact_background.jpg'
-          }
-          layout="fill"
-          objectFit="cover"
+          src={'/images/contact/contact_background.jpg'}
+          alt="long beach club sign"
+          layout="responsive"
+          width={1384}
+          height={420}
+          className="max-h-[320px] w-full object-cover"
           unoptimized
-          alt="contact us background image"
-          className="opacity-65"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
+        <div className="flex flex-col items-center justify-center">
           <div className="max-w-8xl mx-auto px-4 xl:px-10">
-            <div className="flex flex-col items-center justify-center pt-28 md:pt-16">
+            <div className="flex flex-col items-center justify-center pt-2 md:pt-10">
               <BarlowText
                 text="Contacto"
                 fontSize="40px"
-                className="text-bold pt-6 text-white md:pt-0"
+                className="text-bold pt-6 md:pt-0"
               />
               <BarlowText
                 text="¿Tienes alguna consulta?, ¿Quieres solicitar tu primera cita?, ¡No dudes en contactarnos!"
                 fontSize="16px"
-                className="text-bold pb-2 pt-2 text-white md:pb-10 md:pt-6"
+                className="text-bold pb-6 pt-2  text-center md:pb-10 md:pt-6"
               />
             </div>
             <ContactForm />
           </div>
         </div>
-      </div>
-      <section className="bg-gray bottom-0 flex items-center justify-center">
+      </section>
+      <section className="bg-gray flex items-center justify-center">
         <div className="container mx-auto px-6 pt-6">
           <div className="mx-auto mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-20 lg:grid-cols-3">
             <div className="flex flex-col items-center text-center">
@@ -160,6 +158,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   )
 }

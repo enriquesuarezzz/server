@@ -63,7 +63,7 @@ export default function ReviewsSection() {
               <div className="col-span-12 lg:col-span-10">
                 <div className="flex flex-col items-center justify-center md:flex-row ">
                   <Image
-                    src={ item.image}
+                    src={process.env.NEXT_PUBLIC_IMAGES_PATH + item.image}
                     alt="Review image, profile picture"
                     width={32}
                     height={32}

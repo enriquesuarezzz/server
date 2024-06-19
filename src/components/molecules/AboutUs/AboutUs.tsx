@@ -48,7 +48,7 @@ export default function AboutUS() {
         {/* Section image for md and larger screens */}
         <Image
           src={
-             
+            process.env.NEXT_PUBLIC_IMAGES_PATH +
             '/images/about_us_placeholder.jpg'
           }
           alt={'About Us Image'}
@@ -65,7 +65,7 @@ export default function AboutUS() {
       >
         {/* Section image for mobile screens */}
         <Image
-          src={  '/images/about_us_1.jpg'}
+          src={process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us_1.jpg'}
           alt={'About Us Image'}
           width={1200}
           height={600}

@@ -12,25 +12,25 @@ import Link from 'next/link'
 export default function OffersSwiper() {
   const swipers = [
     {
-      image: `${ + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
       alt: 'Depilation example',
       description:
         'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
     },
     {
-      image: `${ + '/images/about_us.jpg'}`,
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'}`,
       alt: 'Depilation example',
       description:
         'Trae a un amigo y consigue un 2x1 en una sesion de depilación. ¡No te lo pierdas!',
     },
     {
-      image: `${ + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
       alt: 'Depilation example',
       description:
         '50% de descuento en todas las sesiones de depilación. ¡No te lo pierdas!',
     },
     {
-      image: `${ + '/images/about_us.jpg'}`,
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'}`,
       alt: 'Depilation example',
       description:
         'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
@@ -52,11 +52,8 @@ export default function OffersSwiper() {
         {swipers.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div
-                key={index}
-                className="flex flex-col items-center gap-6 rounded-lg  p-6 shadow-lg transition-transform duration-500 hover:scale-105 md:flex-row md:gap-12 lg:gap-16"
-              >
-                <div key={index} className="flex-shrink-0">
+              <div className="flex flex-col items-center gap-6 rounded-lg  p-6  transition-transform duration-500 hover:scale-105 md:flex-row md:gap-12 lg:gap-16">
+                <div className="flex-shrink-0">
                   <Image
                     src={item.image}
                     alt={item.alt}
@@ -66,10 +63,7 @@ export default function OffersSwiper() {
                     className="rounded-lg shadow-md"
                   />
                 </div>
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center gap-1 text-gray-800 md:gap-8"
-                >
+                <div className="flex flex-col items-center justify-center gap-1 text-gray-800 md:gap-8">
                   <BarlowText
                     text={''}
                     fontSize="40px"

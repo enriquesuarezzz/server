@@ -6,9 +6,10 @@ import Link from 'next/link'
 
 export function ImagesSliderComponent() {
   const images = [
-    '/images/prices_cards_section/depilation_example1.jpg',
-    '/images/cards_section/card2.jpg',
-    '/images/cards_section/card4.jpg',
+    process.env.NEXT_PUBLIC_IMAGES_PATH +
+      '/images/prices_cards_section/depilation_example1.jpg',
+    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/cards_section/card2.jpg',
+    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/cards_section/card4.jpg',
   ]
   return (
     <ImagesSlider className="h-screen" images={images}>
