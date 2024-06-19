@@ -4,3 +4,11 @@ export const metadata: Metadata = {
   title: 'Depilacion Laser SHR | Aviso Legal',
   description: 'Aviso Legal',
 }
+
+export default function CookiesPage() {
+  return (
+    <>
+      <h1>Aviso Legal</h1>
+    </>
+  )
+}
