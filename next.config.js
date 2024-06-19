@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ['localhost'],
+    domains: ['https://server-git-main-enriquesuarezzzs-projects.vercel.app/'],
   },
 }
