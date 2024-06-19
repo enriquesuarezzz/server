@@ -35,6 +35,12 @@ export const ImagesSlider = ({
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1,
     )
   }
+
+  useEffect(() => {
+    loadImages()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const loadImages = () => {
     setLoading(true)
     const loadPromises = images.map((image) => {
@@ -46,10 +52,6 @@ export const ImagesSlider = ({
       })
     })
 
-    useEffect(() => {
-      loadImages()
-    }, [loadImages])
-
     Promise.all(loadPromises)
       .then((loadedImages) => {
         setLoadedImages(loadedImages as string[])
@@ -57,7 +59,9 @@ export const ImagesSlider = ({
       })
       .catch((error) => console.error('Failed to load images', error))
   }
+
   useEffect(() => {
+    // Effect logic here
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'ArrowRight') {
         handleNext()
@@ -80,7 +84,7 @@ export const ImagesSlider = ({
       window.removeEventListener('keydown', handleKeyDown)
       clearInterval(interval)
     }
-  }, [])
+  }, [autoplay, handleNext, handlePrevious]) // Add dependencies to the array
 
   const slideVariants = {
     initial: {
