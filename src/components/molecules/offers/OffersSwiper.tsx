@@ -37,7 +37,7 @@ export default function OffersSwiper() {
     },
   ]
   return (
-    <div className="mx-auto max-w-[1000px] px-4 pt-20">
+    <div id={'offers'} className="mx-auto max-w-[1000px] px-4 pt-20">
       <Swiper
         spaceBetween={20}
         slidesPerView={'auto'}
@@ -46,9 +46,10 @@ export default function OffersSwiper() {
           clickable: true,
           dynamicBullets: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination]} // Include pagination module
         className="mySwiper"
       >
+        {/* Swiper slides using array of information */}
         {swipers.map((item, index) => {
           return (
             <SwiperSlide key={index}>
